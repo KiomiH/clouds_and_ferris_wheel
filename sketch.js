@@ -11,7 +11,7 @@ var Radius =Diameter/2;
 var slider;
 var song;
 var clouds;
-var button;
+var playbutton;
 var Counter =0;
 
 function preload() {
@@ -47,15 +47,15 @@ function setup() {
 	}
 	angleMode(DEGREES);
 	
-	pausebutton = createButton("pause");
+	/*pausebutton = createButton("pause");
 	pausebutton.position(200,100)
 	pausebutton.size(50,35)
-	pausebutton.mousePressed(pausesong);
+	pausebutton.mousePressed(pausesong);*/
 	
 	playbutton = createButton("play");
 	playbutton.position(200,55)
 	playbutton.size(50,35)
-	playbutton.mousePressed(playsong);
+	playbutton.mousePressed(togglePlaying);
 
 	slider = createSlider(0,255,120);
 	slider.position(340,120);
@@ -379,9 +379,16 @@ function RotatingObject6 (CentX,CentY,Diam) {
 	}
 }
 
-function pausesong(){
+/*function pausesong(){
 	pausebutton.mousePressed = song.pause();
+	}*/
+
+function togglePlaying(){
+	if(!song.isPlaying()){
+		song.play();
+		playbutton.html("pause");
+	} else {
+		song.pause();
+		playbutton.html("play");
 	}
-function playsong(){
-	playbutton.mousePressed = song.play();
 }
