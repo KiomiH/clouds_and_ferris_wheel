@@ -9,14 +9,14 @@ var Cx, Cy;
 var Diameter =300;
 var Radius =Diameter/2;
 var slider;
-var song;
-var clouds;
-var button;
-var Counter =0;
+//var song;
+//var clouds;
+//var button;
+//var Counter =0;
 
-function preload() {
+/*function preload() {
 	song = loadSound("Waltz_of_the_Carnies.mp3");
-	clouds = loadImage("cloud_pic2.gif");
+	clouds = loadImage("cloud_pic2.gif");*/
 }
 
 function setup() {
@@ -25,9 +25,9 @@ function setup() {
 	frameRate(30);
 	cenX = 1200/2
 	
-	song.loop();
+	/*song.loop();
 	analyzer = new p5.Amplitude();
-	analyzer.setInput(song);
+	analyzer.setInput(song);*/
 	
 	noStroke();
 	fill(0,200,255);
@@ -47,7 +47,7 @@ function setup() {
 	}
 	angleMode(DEGREES);
 	
-	pausebutton = createButton("pause");
+	/*pausebutton = createButton("pause");
 	pausebutton.position(200,100)
 	pausebutton.size(50,35)
 	pausebutton.mousePressed(pausesong);
@@ -55,7 +55,7 @@ function setup() {
 	playbutton = createButton("play");
 	playbutton.position(200,55)
 	playbutton.size(50,35)
-	playbutton.mousePressed(playsong);
+	playbutton.mousePressed(playsong);*/
 
 	slider = createSlider(0,255,120);
 	slider.position(340,120);
@@ -71,7 +71,7 @@ function draw() {
 	fill(0,255,50);
 	rect(0,400,1200,270);
 	
-Counter = Counter+2;
+/*Counter = Counter+2;
 	if(Counter>1200){
 		Counter = cenX-1200;
 	}
@@ -80,7 +80,7 @@ Counter = Counter+2;
 	image(clouds,20+Counter,5,200,160);
 	image(clouds,450+Counter,5,220,180);
 	image(clouds,730+Counter,40,180,140);
-	image(clouds,930+Counter,70,240,200);
+	image(clouds,930+Counter,70,240,200);*/
 	
 	
 	colorMode(HSB,255);	
@@ -379,9 +379,9 @@ function RotatingObject6 (CentX,CentY,Diam) {
 	}
 }
 
-function pausesong(){
+/*function pausesong(){
 	pausebutton.mousePressed = song.pause();
 	}
 function playsong(){
 	playbutton.mousePressed = song.play();
-}
+}*/
